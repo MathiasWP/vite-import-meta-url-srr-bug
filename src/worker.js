@@ -1,3 +1,1 @@
-addEventListener('message', () => {
-    postMessage('world')
-})
+console.log('Beep boop i am a worker')
