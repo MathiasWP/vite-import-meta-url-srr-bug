@@ -11,7 +11,7 @@ async function createServer() {
 
     app.use('*', async (req, res, next) => {
         try {
-            // Simply importing the client-side code
+            // Simply loading the client module
             // is enough to trigger the "`new URL(url, import.meta.url)` is not supported in SSR" error
             await vite.ssrLoadModule('/src/client.js')
 
@@ -24,6 +24,5 @@ async function createServer() {
 
     app.listen(3000)
 }
-
 
 createServer()
